@@ -11,16 +11,16 @@ import java.util.Scanner;
 
 public class MainProject {
     public static void main(String[] args) throws IOException, ParseException {
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         String fileName="./src/main/resources/users.json";
         JSONParser jsonParser = new JSONParser();
         Object obj = jsonParser.parse(new FileReader(fileName));
         JSONArray jsonArray = (JSONArray) obj;
 
         System.out.println("Enter your username");
-        String username = sc.next();
+        String username = scan.next();
         System.out.println("Enter your password");
-        String password = sc.next();
+        String password = scan.next();
 
         JSONObject jsonAdmin = (JSONObject) jsonArray.get(0);
 
